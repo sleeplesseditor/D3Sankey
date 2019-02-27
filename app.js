@@ -70,7 +70,7 @@ showTooltip = function () {
 colorScale = d3.scale.ordinal().domain(TYPES).range(TYPE_COLORS),
 highlightColorScale = d3.scale.ordinal().domain(TYPES).range(TYPE_HIGHLIGHT_COLORS),
 
-svg = d3.select("#chart").append("svg")
+svg = d3.select("#chart__container__chart").append("svg")
         .attr("width", WIDTH + MARGIN.LEFT + MARGIN.RIGHT)
         .attr("height", HEIGHT + MARGIN.TOP + MARGIN.BOTTOM)
       .append("g")
@@ -80,7 +80,7 @@ svg.append("g").attr("id", "links");
 svg.append("g").attr("id", "nodes");
 svg.append("g").attr("id", "collapsers");
 
-tooltip = d3.select("#chart").append("div").attr("id", "tooltip");
+tooltip = d3.select("#chart__container__chart").append("div").attr("id", "tooltip");
 
 tooltip.style("opacity", 0)
     .append("p")
